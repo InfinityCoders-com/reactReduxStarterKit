@@ -1,3 +1,41 @@
+.logo {
+  position: relative;
+  float: left;
+  padding: 4px 15px;
+}
+
+.nav {
+  position: relative;
+  float: right;
+  margin: 0 auto;
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 100px;
+    padding: 4px 10px;
+    margin: 2px 5px;
+    border-right: 1px solid rgba(255,255,255,.2);
+  }
+  a:nth-child(1) {
+    padding-left: 14px;
+    border-left: 1px solid rgba(255,255,255,.2);
+  }
+}
+
+.settings {
+  position: absolute;
+  display: inline-block;
+  float: right;
+  right: 0px;
+  min-height: 20px;
+  width: 20px;
+  margin: 5px 10px;
+  background: url('./assets/controls.svg') center center no-repeat;
+  background-size: contain;
+}
+
 .page-layout__viewport {
   padding-top: 4rem;
 }
