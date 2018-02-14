@@ -11,12 +11,19 @@ export const PageLayout = ({ children }) => (
         <IndexLink to='/' activeClassName='page-layout__nav-item--active'>Home</IndexLink>
         <Link to='/counter' activeClassName='page-layout__nav-item--active'>Counter</Link>
       </div>
-      <span className='settings'></span>
+      <span className='settings' />
+    </div>
+    <div className='row' id='submenu'>
+      <div className='col' />
+      {/* <div className=''></div> */}
     </div>
     <div className='row'>
+      <div className='left-menu'>
+        <span className='glyphicon glyphicon-menu-left' />
+      </div>
       <div className='page-layout__viewport'>
         {children}
-      </div>    
+      </div>
     </div>
   </div>
 )
