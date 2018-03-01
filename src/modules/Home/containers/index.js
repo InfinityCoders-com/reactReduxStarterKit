@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import Home from 'Components/home';
-import { changeName } from 'Redux/actions/hello';
+import Home from '../components/';
+import { changeName } from 'Redux/home/actions/';
 
 export function mapStateToProps(state) {
   return {
