@@ -1,14 +1,14 @@
 import React, { PropTypes } from 'react';
 
-const Home = ({ name, onNameChange }) =>
+const Login = ({ name, onNameChange }) =>
   <div>
     <input type="text" onChange={onNameChange} />
     <p>Hello {name}</p>
   </div>;
 
-Home.propTypes = {
+Login.propTypes = {
   name: PropTypes.string.isRequired,
   onNameChange: PropTypes.func.isRequired
 };
 
-export default Home;
+export default Login;

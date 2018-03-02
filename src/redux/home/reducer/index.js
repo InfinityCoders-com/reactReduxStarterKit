@@ -1,9 +1,9 @@
 import { handleActions } from 'redux-actions';
 
 export const initialState = {
-  name: 'world'
+  name: 'world !'
 };
 
-export const hello = handleActions({
+export const home = handleActions({
   CHANGE_NAME: (state, action) => ({ name: action.payload })
 }, initialState);

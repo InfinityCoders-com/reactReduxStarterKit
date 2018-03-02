@@ -4,6 +4,6 @@ export const initialState = {
   name: 'world'
 };
 
-export const hello = handleActions({
+export const login = handleActions({
   CHANGE_NAME: (state, action) => ({ name: action.payload })
 }, initialState);

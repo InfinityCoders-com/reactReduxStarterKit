@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
-import Home from '../components/';
-import { changeName } from 'Redux/home/actions/';
+import Login from '../components/';
+import { changeName } from 'Redux/actions';
 
 export function mapStateToProps(state) {
   return {
-    name: state.hello.name
+    name: state.login.name
   };
 }
 
@@ -14,4 +14,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
