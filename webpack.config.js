@@ -37,7 +37,9 @@ var environments = {
       path: __dirname + '/dist',
     },
     devServer: {
-      port: 9000
+      inline: true,
+      port: 9000,
+      hot: true
     }
   },
 
