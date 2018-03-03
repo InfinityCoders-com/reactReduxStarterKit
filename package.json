@@ -8,7 +8,7 @@
     "build": "NODE_ENV=production webpack",
     "test": "./node_modules/.bin/_mocha",
     "autotest": "./node_modules/.bin/_mocha --watch",
-    "start:server": "nodemon server/index.js"
+    "start:server": "node server/index.js"
   },
   "repository": {
     "type": "git",
@@ -34,7 +34,8 @@
     "redux-devtools": "^3.1.1",
     "redux-logger": "^2.6.1",
     "redux-thunk": "^2.0.1",
-    "socket.io": "^2.0.4"
+    "socket.io": "^2.0.4",
+    "socket.io-react": "^1.2.0"
   },
   "peerDependencies": {
     "react": "^0.14.8",

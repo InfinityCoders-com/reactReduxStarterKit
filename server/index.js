@@ -2,9 +2,9 @@ const http = require('http');
 var server = require('http').createServer();
 var io = require('socket.io')(server);
 
-require('./config/connectMongo');
+// require('./config/connectMongo');
 var route = require('./routes');
-var Auth = require('./model/auth');
+// var Auth = require('./model/auth');
 
 var io = require('socket.io')(http.createServer(function(req, res) {
     res.writeHead(200, {'Content-Type': 'text/html'});
@@ -15,10 +15,9 @@ var io = require('socket.io')(http.createServer(function(req, res) {
 console.log('=======================');
 io.on('connection', function(client){
     console.log('its connected');
-    res.write('Hello u are connected to sockets.');
-    client.on('event', function(){
-        console.log('event');
-        res.end();
+    client.on('event', function(msg){
+        console.log(msg, 'event');
+        client.emit('eventResponse', 'hi i am world.');
     });
     client.on('disconnect', function(){
         console.log('disconnected');
