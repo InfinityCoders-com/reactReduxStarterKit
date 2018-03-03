@@ -1,17 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { Router, useRouterHistory } from 'react-router';
-import { createHashHistory } from 'history';
-import configureStore from './store';
-import routes from './routes';
+import React, { PropTypes } from 'react';
+import Header from 'Components/header';
 
-const store = configureStore();
+export class App extends React.Component {
+  render () {
+    return (
+      <div>
+        <Header />
+        {this.props.children}
+      </div>
+    )
+  }
+}
 
-const appHistory = useRouterHistory(createHashHistory)({queryKey: false});
-
-ReactDOM.render((
-  <Provider store={store} queryKey={false}>
-    <Router history={appHistory} routes={routes(store)} />
-  </Provider>
-), document.getElementById('app'));
+export default App;

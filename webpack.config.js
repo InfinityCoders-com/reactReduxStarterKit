@@ -16,7 +16,7 @@ var environments = {
     },
     context: __dirname + '/src',
     entry: {
-      javascript: './app.js',
+      javascript: './index.js',
       html: './index.html',
     },
     module: {
@@ -33,7 +33,7 @@ var environments = {
       ]
     },
     output: {
-      filename: 'app.js',
+      filename: 'index.js',
       path: __dirname + '/dist',
     },
     devServer: {
@@ -46,7 +46,7 @@ var environments = {
   production: {
     context: __dirname + '/src',
     entry: {
-      javascript: './app.js',
+      javascript: './index.js',
       html: './index.html',
     },
     module: {
@@ -66,7 +66,7 @@ var environments = {
       new webpack.optimize.UglifyJsPlugin({minimize: true})
     ],
     output: {
-      filename: 'app.js',
+      filename: 'index.js',
       path: __dirname + '/dist',
     }
   }
