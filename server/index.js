@@ -1,16 +1,15 @@
 const http = require('http');
-var server = require('http').createServer();
-var io = require('socket.io')(server);
-
+require('./mysqlServer/');
 // require('./config/connectMongo');
-var route = require('./routes');
 // var Auth = require('./model/auth');
+const route = require('./routes');
 
-var io = require('socket.io')(http.createServer(function(req, res) {
+const server = http.createServer(function(req, res) {
     res.writeHead(200, {'Content-Type': 'text/html'});
     route.routes(req, res);
-}).listen(5000));
+}).listen(5000);
 
+const io = require('socket.io')(server);
 
 console.log('=======================');
 io.on('connection', function(client){
@@ -23,9 +22,3 @@ io.on('connection', function(client){
         console.log('disconnected');
     });
 });
-
-// server(function(req, res){
-//         res.writeHead(200, {'Content-Type': 'text/html'});
-//         route.routes(req, res);
-// });
-// server.listen(5000);

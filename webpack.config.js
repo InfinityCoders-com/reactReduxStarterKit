@@ -44,6 +44,16 @@ var environments = {
   },
 
   production: {
+    resolve: {
+        alias: {
+            src:        `${projectRoot}/src`,
+            Components: `${projectRoot}/src/components`,
+            Containers: `${projectRoot}/src/containers`,
+            Modules:    `${projectRoot}/src/modules`,
+            Redux:      `${projectRoot}/src/redux`,
+            Styles:     `${projectRoot}/src/styles`
+        }
+    },
     context: __dirname + '/src',
     entry: {
       javascript: './index.js',

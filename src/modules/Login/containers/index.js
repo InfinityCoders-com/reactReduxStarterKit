@@ -22,7 +22,7 @@ export class Login extends React.Component {
     this.props.onSubmit(this.state);
   }
   render () {
-    console.log(this.props);
+    // console.log(this.props);
     return (
       <div>
         <LoginForm
