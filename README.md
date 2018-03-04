@@ -4,6 +4,14 @@ This project includes a basic starter boilerplate for our React + Redux +
 React Router projects, using webpack as a build system and babel for
 transpilation.
 
+## Prerequisite
+
+Installed applications
+* Node - v9.4.0
+* npm - 5.6.0
+* Mysql Server version: 5.7.21-0
+* MongoDB
+
 ## Front-End
 
 #### React + Redux + Thunk

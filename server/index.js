@@ -1,7 +1,7 @@
 const http = require('http');
 require('./mysqlServer/');
-// require('./config/connectMongo');
-// var Auth = require('./model/auth');
+require('./config/connectMongo');
+const Auth = require('./model/auth');
 const route = require('./routes');
 
 const server = http.createServer(function(req, res) {
