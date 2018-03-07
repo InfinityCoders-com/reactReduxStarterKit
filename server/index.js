@@ -1,8 +1,11 @@
 const http = require('http');
-require('./mysqlServer/');
+require('./appMysql/');
 require('./config/connectMongo');
+// require('./backup');
+
 const Auth = require('./model/auth');
 const route = require('./routes');
+const Log = require('./app/helpers/');
 
 const server = http.createServer(function(req, res) {
     res.writeHead(200, {'Content-Type': 'text/html'});
@@ -11,14 +14,13 @@ const server = http.createServer(function(req, res) {
 
 const io = require('socket.io')(server);
 
-console.log('=======================');
 io.on('connection', function(client){
-    console.log('its connected');
+    Log('Socket Connected!');
     client.on('event', function(msg){
-        console.log(msg, 'event');
+        Log(`Event: ${msg}`);
         client.emit('eventResponse', 'hi i am world.');
     });
     client.on('disconnect', function(){
-        console.log('disconnected');
+        Log('Socket Disconnected!');
     });
 });

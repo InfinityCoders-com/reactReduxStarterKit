@@ -2,11 +2,12 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import LoginForm from '../components/';
 import { SocketProvider } from 'socket.io-react';
-import io from 'socket.io-client';
-const socket = io.connect('http://localhost:5000');
-socket.emit('connection', 'Hello World');
-socket.emit('event', 'Hello World');
-socket.on('eventResponse', msg => console.log(msg, 'on msg'))
+// import {login} from 'src/redux/login/actions';
+// import io from 'socket.io-client';
+// const socket = io.connect('http://localhost:5000');
+// socket.emit('connection', 'Hello World');
+// socket.emit('event', 'Hello World');
+// socket.on('eventResponse', msg => console.log(msg, 'on msg'))
 
 import { login } from 'Redux/login/actions/'
 
@@ -47,7 +48,7 @@ export function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     onSubmit: (credentials) => dispatch(login(credentials)),
-    onNameChange: (e) => dispatch(changeName(e.target.value))
+    onNameChange: (e) => dispatch(login(e.target.value))
   };
 }
 

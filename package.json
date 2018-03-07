@@ -25,6 +25,8 @@
     "mongodb": "^3.0.2",
     "mongoose": "^5.0.6",
     "mysql": "^2.15.0",
+    "mysql-backup": "^1.0.0",
+    "mysqldump": "^1.4.2",
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
     "react-redux": "^4.4.1",
@@ -35,8 +37,10 @@
     "redux-devtools": "^3.1.1",
     "redux-logger": "^2.6.1",
     "redux-thunk": "^2.0.1",
+    "routes": "^2.1.0",
     "socket.io": "^2.0.4",
-    "socket.io-react": "^1.2.0"
+    "socket.io-react": "^1.2.0",
+    "whatwg-fetch": "^2.0.3"
   },
   "peerDependencies": {
     "react": "^0.14.8",
