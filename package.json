@@ -4,7 +4,7 @@
   "description": "Starter pack for React + Redux + Webpack projects",
   "main": "dist/app.js",
   "scripts": {
-    "dev": "NODE_ENV=development webpack-dev-server --watch --hot --inline",
+    "start": "NODE_ENV=development webpack-dev-server --watch --hot --inline",
     "build": "NODE_ENV=production webpack",
     "test": "./node_modules/.bin/_mocha",
     "autotest": "./node_modules/.bin/_mocha --watch",

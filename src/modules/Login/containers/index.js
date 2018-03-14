@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import LoginForm from '../components/';
 import { SocketProvider } from 'socket.io-react';
+import { login } from 'Redux/login/actions/';
 // import {login} from 'src/redux/login/actions';
 // import io from 'socket.io-client';
 // const socket = io.connect('http://localhost:5000');
@@ -9,7 +10,6 @@ import { SocketProvider } from 'socket.io-react';
 // socket.emit('event', 'Hello World');
 // socket.on('eventResponse', msg => console.log(msg, 'on msg'))
 
-import { login } from 'Redux/login/actions/'
 
 export class Login extends React.Component {
   constructor(props){
@@ -22,8 +22,11 @@ export class Login extends React.Component {
   onSubmit(){
     this.props.onSubmit(this.state);
   }
+  // componentWillReceiveProps(nextProps){
+  //   console.log(this.props,nextProps, '============');
+  // }
   render () {
-    // console.log(this.props);
+    console.log(this.props, '============');
     return (
       <div>
         <LoginForm
@@ -39,16 +42,15 @@ export class Login extends React.Component {
 
 Login.propTypes = {};
 
-export function mapStateToProps(state) {
+const mapStateToProps = (state) => {
   return {
-    name: state.login.name
+    name: state.login
   };
 }
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = (dispatch) => {
   return {
-    onSubmit: (credentials) => dispatch(login(credentials)),
-    onNameChange: (e) => dispatch(login(e.target.value))
+    onSubmit: (credentials) => dispatch(login(credentials))
   };
 }
 
